@@ -14,6 +14,19 @@ def countConsistentStrings(allowed, words):
                 break
     return count
 
+# Solution #2 
+
+        allowed = set(allowed)
+        count = 0
+
+        for word in words:
+            for letter in word:
+                if letter not in allowed:
+                    count += 1
+                    break
+
+        return len(words) - count
+
 
 print(countConsistentStrings("ab", ["ad", "bd", "aaab", "baa", "badab"]))
 print(countConsistentStrings("abc", ["a", "b", "c", "ab", "ac", "bc", "abc"]))
