@@ -1,0 +1,22 @@
+#1 Solution
+
+
+def checkIfPangram(sentence):
+    alphabet = set(string.ascii_lowercase)
+    if set(sentence.lower()) >= alphabet:
+        return True
+    else:
+        return False
+
+
+class Solution:
+    pass
+
+
+print(checkIfPangram('thequickbrownfoxjumpsoverthelazydog'))
+
+
+#2 Solution
+
+def checkIfPangram(sentence):
+    return len(set(sentence)) == 26
